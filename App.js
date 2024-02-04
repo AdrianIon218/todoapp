@@ -1,20 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import styles from "./App.style";
+import paperBackground from "./assets/paper_background.jpg";
+import paperBackgroundDark from "./assets/paper_background_dark.jpg";
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+import ToDoList from "./components/ToDoList";
+import ToDoContextProvider from "./components/Contexts/ToDoContext";
+import AddTodoBtn from "./components/AddTodoBtn";
+import ThemeContext, { useThemeCtx } from "./components/Contexts/ThemeContext";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ToDoContextProvider>
+      <ThemeContext>
+        <Main />
+      </ThemeContext>
+    </ToDoContextProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+function Main() {
+  const isDarkMode = useThemeCtx().isNightTheme();
+  return (
+    <View style={[styles.container, isDarkMode && styles.containerDark]}>
+      <SafeAreaProvider>
+        <SafeAreaView style={styles.container}>
+          <Header />
+          <ImageBackground
+            style={styles.img_bg}
+            source={isDarkMode ? paperBackgroundDark : paperBackground}
+          >
+            <Menu />
+            <ToDoList />
+            <AddTodoBtn />
+          </ImageBackground>
+        </SafeAreaView>
+      </SafeAreaProvider>
+    </View>
+  );
+}

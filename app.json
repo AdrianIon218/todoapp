@@ -1,30 +1,41 @@
 {
   "expo": {
     "name": "ToDoApp",
-    "slug": "ToDoApp",
-    "version": "1.0.0",
+    "slug": "todoapp",
+    "version": "1.1.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon_app.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logo.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon_app.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.adrianion.todoapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4169fa7a-20c6-4900-ae2c-c66c9239eef8"
+      }
+    },
+    "owner": "adrianion",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4169fa7a-20c6-4900-ae2c-c66c9239eef8"
     }
   }
 }

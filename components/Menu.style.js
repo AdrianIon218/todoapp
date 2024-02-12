@@ -20,6 +20,7 @@ export default styles = StyleSheet.create({
     backgroundColor: colorGray,
   },
   txt: {
+    fontFamily: "Roboto",
     fontSize: 20,
     color: "rgb(66, 135, 245)",
   },

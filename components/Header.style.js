@@ -17,6 +17,7 @@ export default styles = StyleSheet.create({
     padding: 0,
   },
   title: {
+    fontFamily: "Roboto",
     fontSize: 20,
     color: colorBlue,
     fontWeight: "800",

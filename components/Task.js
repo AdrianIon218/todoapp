@@ -36,7 +36,7 @@ function Task({ id, title, isCompleted, onEdit }) {
       <Text
         style={[
           styles.txt,
-          isCompleted && styles.completed,
+          isCompleted && (isDarkMode ? styles.darkCompleted : styles.completed),
           !isCompleted && isDarkMode && styles.txtDark,
         ]}
       >
@@ -45,7 +45,11 @@ function Task({ id, title, isCompleted, onEdit }) {
 
       {isCompleted ? (
         <Text style={styles.checkMarkCtn}>
-          <FontAwesome5 name={"check"} brand style={styles.checkMark} />
+          <FontAwesome5
+            name={"check"}
+            brand
+            style={[styles.checkMark, isDarkMode && { color: "lightgreen" }]}
+          />
         </Text>
       ) : (
         <TouchableOpacity style={styles.editCtn} onPress={onEdit}>

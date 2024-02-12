@@ -1,5 +1,10 @@
 import { StyleSheet } from "react-native";
-import { colorBlack, colorGray, colorGrayLight } from "./Colors";
+import {
+  colorBlack,
+  colorGray,
+  colorGrayLight,
+  colorLightGreen,
+} from "./Colors";
 
 export default styles = StyleSheet.create({
   container: {
@@ -37,6 +42,10 @@ export default styles = StyleSheet.create({
   completed: {
     textDecorationLine: "line-through",
     color: "green",
+  },
+  darkCompleted: {
+    textDecorationLine: "line-through",
+    color: "lightgreen",
   },
   checkMarkCtn: {
     position: "absolute",

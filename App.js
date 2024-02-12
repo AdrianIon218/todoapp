@@ -9,13 +9,15 @@ import ToDoList from "./components/ToDoList";
 import ToDoContextProvider from "./components/Contexts/ToDoContext";
 import AddTodoBtn from "./components/AddTodoBtn";
 import ThemeContext, { useThemeCtx } from "./components/Contexts/ThemeContext";
+import { useFonts } from "expo-font";
 
 export default function App() {
+  const [isFontLoaded] = useFonts({
+    Roboto: require("./assets/Roboto.ttf"),
+  });
   return (
     <ToDoContextProvider>
-      <ThemeContext>
-        <Main />
-      </ThemeContext>
+      <ThemeContext>{isFontLoaded && <Main />}</ThemeContext>
     </ToDoContextProvider>
   );
 }

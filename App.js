@@ -1,4 +1,4 @@
-import { ImageBackground, View } from "react-native";
+import { ImageBackground, StatusBar, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import styles from "./App.style";
 import paperBackground from "./assets/paper_background.jpg";
@@ -10,6 +10,7 @@ import ToDoContextProvider from "./components/Contexts/ToDoContext";
 import AddTodoBtn from "./components/AddTodoBtn";
 import ThemeContext, { useThemeCtx } from "./components/Contexts/ThemeContext";
 import { useFonts } from "expo-font";
+import { colorGray } from "./components/Colors";
 
 export default function App() {
   const [isFontLoaded] = useFonts({
@@ -26,6 +27,10 @@ function Main() {
   const isDarkMode = useThemeCtx().isNightTheme();
   return (
     <View style={[styles.container, isDarkMode && styles.containerDark]}>
+      <StatusBar
+        backgroundColor={isDarkMode ? colorGray : "transparent"}
+        barStyle={isDarkMode ? "light-content" : "dark-content"}
+      />
       <SafeAreaProvider>
         <SafeAreaView style={styles.container}>
           <Header />

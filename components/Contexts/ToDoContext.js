@@ -47,6 +47,20 @@ const reducer = (state, action) => {
         tasks: state.tasks.filter((item) => item.id !== idTask),
       };
 
+    case "deleteTasksByCriteria":
+      const criteria = action.payload;
+      return {
+        ...state,
+        tasks:
+          criteria === "all"
+            ? []
+            : criteria === "in progress"
+            ? state.tasks.filter((item) => item.isCompleted)
+            : criteria === "done"
+            ? state.tasks.filter((item) => !item.isCompleted)
+            : state.tasks,
+      };
+
     case "updateFilter":
       const filter = action.payload;
       return ["all", "inProgress", "done"].includes(filter)
@@ -131,6 +145,9 @@ function ToDoContextProvider({ children }) {
     },
     updateTodo: (toDoId, newTitle) => {
       dispatch({ type: "updateTodo", payload: { toDoId, newTitle } });
+    },
+    deleteTasksByCriteria: (criteria) => {
+      dispatch({ type: "deleteTasksByCriteria", payload: criteria });
     },
   };
 

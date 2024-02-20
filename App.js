@@ -10,7 +10,7 @@ import ToDoContextProvider from "./components/Contexts/ToDoContext";
 import AddTodoBtn from "./components/AddTodoBtn";
 import ThemeContext, { useThemeCtx } from "./components/Contexts/ThemeContext";
 import { useFonts } from "expo-font";
-import { colorGray } from "./components/Colors";
+import { colorGray } from "./components/Styles/Colors";
 
 export default function App() {
   const [isFontLoaded] = useFonts({

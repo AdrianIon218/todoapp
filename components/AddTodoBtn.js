@@ -1,8 +1,8 @@
-import { TouchableOpacity, Text, Alert } from "react-native";
+import { TouchableOpacity, Text } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import { useState } from "react";
 
-import styles from "./AddToDoBtn.style";
+import styles from "./Styles/AddToDoBtn.style";
 import { useToDoCtx } from "./Contexts/ToDoContext.js";
 import { MAX_NUM_OF_TASKS } from "./Contexts/ToDoContext.js";
 import DialogNewTask from "./Dialogs/DialogNewTask.js";

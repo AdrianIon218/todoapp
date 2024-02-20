@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-import styles from "./Menu.style";
+import styles from "./Styles/Menu.style";
 import { useToDoCtx } from "./Contexts/ToDoContext";
 import { useThemeCtx } from "./Contexts/ThemeContext";
 

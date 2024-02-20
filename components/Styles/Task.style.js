@@ -49,7 +49,7 @@ export default styles = StyleSheet.create({
   },
   checkMarkCtn: {
     position: "absolute",
-    right: 4,
+    right: 7,
     top: "50%",
     justifyContent: "space-evenly",
     transform: [{ translateY: -8 }],

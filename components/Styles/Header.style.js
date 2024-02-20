@@ -22,9 +22,16 @@ export default styles = StyleSheet.create({
     color: colorBlue,
     fontWeight: "800",
   },
-  changeThemeBtn: {
+  buttonsCtn: {
     marginLeft: "auto",
     marginRight: "5%",
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    gap: 14,
+    alignItems: "center",
+  },
+  changeThemeBtn: {
     borderRadius: 10,
   },
   changeThemeBtnCtn: {

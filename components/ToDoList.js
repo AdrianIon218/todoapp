@@ -1,5 +1,5 @@
 import { View, ScrollView, Text } from "react-native";
-import styles from "./ToDoList.style";
+import styles from "./Styles/ToDoList.style";
 import { useToDoCtx } from "./Contexts/ToDoContext";
 import Task from "./Task";
 import DialogEditTask from "./Dialogs/DialogEditTask";

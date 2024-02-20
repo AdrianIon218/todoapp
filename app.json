@@ -11,9 +11,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.adrianion.todoapp"
     },
     "android": {
       "softwareKeyboardLayoutMode": "pan",
@@ -38,6 +41,8 @@
     "updates": {
       "url": "https://u.expo.dev/4169fa7a-20c6-4900-ae2c-c66c9239eef8"
     },
-    "plugins": ["expo-font"]
+    "plugins": [
+      "expo-font"
+    ]
   }
 }

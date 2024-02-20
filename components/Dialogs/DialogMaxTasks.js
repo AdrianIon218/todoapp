@@ -1,5 +1,6 @@
 import Dialog from "react-native-dialog";
 import styles from "./DialogMaxTasks.style";
+import { colorRedLight } from "../Styles/Colors";
 
 function DialogMaxTask({ closeDialog, isDialogOpen }) {
   return (
@@ -17,7 +18,7 @@ function DialogMaxTask({ closeDialog, isDialogOpen }) {
       <Dialog.Button
         label="OK"
         styel={styles.dialogBtn}
-        color="rgb(179, 39, 53)"
+        color={colorRedLight}
         sty
         bold
         onPress={closeDialog}

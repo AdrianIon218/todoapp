@@ -1,6 +1,6 @@
 import { TouchableOpacity, Text, Alert } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
-import styles from "./Task.style";
+import styles from "./Styles/Task.style";
 import { useToDoCtx } from "./Contexts/ToDoContext";
 import { useThemeCtx } from "./Contexts/ThemeContext";
 
